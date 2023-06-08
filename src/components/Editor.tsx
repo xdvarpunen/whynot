@@ -12,15 +12,21 @@ export const Editor = () => {
             doc: `<!DOCTYPE html>
                 <html>
                     <head>
-                    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+                        <style>
+                            div { height: 100vh; width: 100vw; } 
+                            model-viewer { height: inherit; width: inherit; }
+                        </style>
+                        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
                     </head>
                     <body>
-                    <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
-                    ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz"
-                    alt="A 3D model of an astronaut"
-                    ar
-                    auto-rotate
-                    camera-controls></model-viewer>
+                        <div>
+                            <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+                            ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz"
+                            alt="A 3D model of an astronaut"
+                            ar
+                            auto-rotate
+                            camera-controls></model-viewer>
+                        </div>
                     </body>
                 </html>`,
             extensions: [
