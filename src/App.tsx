@@ -19,7 +19,7 @@ function openNewTab() {
   const winUrl = URL.createObjectURL(
     new Blob([winHtml], { type: "text/html" })
   );
-  const win = window.open(winUrl)
+  window.open(winUrl)
 }
 
 function App() {

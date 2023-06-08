@@ -5,7 +5,7 @@ import { defaultKeymap } from '@codemirror/commands'
 import { oneDark } from '@codemirror/theme-one-dark'
 
 export const Editor = () => {
-    const editor = useRef()
+    const editor = useRef(null)
 
     useEffect(() => {
         const startState = EditorState.create({
@@ -29,7 +29,7 @@ export const Editor = () => {
                 ]
         })
 
-        const view = new EditorView({ state: startState, parent: editor.current })
+        const view = new EditorView({ state: startState, parent: editor.current as any })
 
         return () => {
             view.destroy()
