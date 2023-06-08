@@ -13,7 +13,7 @@ export const Editor = () => {
                 <html>
                     <head>
                         <style>
-                            div { height: 70vh; width: 100vw; } 
+                            div { height: 50vh; width: 50vw; } 
                             model-viewer { height: inherit; width: inherit; }
                         </style>
                         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
@@ -25,7 +25,11 @@ export const Editor = () => {
                             alt="A 3D model of an astronaut"
                             ar
                             auto-rotate
-                            camera-controls></model-viewer>
+                            camera-controls>
+                                <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; ">
+                                    👋 Activate AR
+                                </button>
+                            </model-viewer>
                         </div>
                     </body>
                 </html>`,

@@ -49,7 +49,7 @@ Error generating stack: `+l.message+`
                 <html>
                     <head>
                         <style>
-                            div { height: 70vh; width: 100vw; } 
+                            div { height: 50vh; width: 50vw; } 
                             model-viewer { height: inherit; width: inherit; }
                         </style>
                         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"><\/script>
@@ -61,14 +61,18 @@ Error generating stack: `+l.message+`
                             alt="A 3D model of an astronaut"
                             ar
                             auto-rotate
-                            camera-controls></model-viewer>
+                            camera-controls>
+                                <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; ">
+                                    👋 Activate AR
+                                </button>
+                            </model-viewer>
                         </div>
                     </body>
                 </html>`,extensions:[Fm.of(kS),LS]}),n=new V({state:e,parent:t.current});return()=>{n.destroy()}},[]),ln.jsx("div",{ref:t})};function RS(){const t=`<!DOCTYPE html>
   <html>
       <head>
           <style>
-              div { height: 100vh; width: 100vw; } 
+              div { height: 50vh; width: 50vw; } 
               model-viewer { height: inherit; width: inherit; }
           </style>
           <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"><\/script>
@@ -80,7 +84,11 @@ Error generating stack: `+l.message+`
               alt="A 3D model of an astronaut"
               ar
               auto-rotate
-              camera-controls></model-viewer>
+              camera-controls>
+                <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; ">
+                    👋 Activate AR
+                </button>
+              </model-viewer>
           </div>
       </body>
   </html>`,e=URL.createObjectURL(new Blob([t],{type:"text/html"}));window.open(e)}function BS(){return ln.jsxs(ln.Fragment,{children:[ln.jsx("h1",{children:"Editor"}),ln.jsx(NS,{}),ln.jsx("button",{onClick:RS,children:"Open In New Tab"})]})}lu.createRoot(document.getElementById("root")).render(ln.jsx(I0.StrictMode,{children:ln.jsx(BS,{})}));
