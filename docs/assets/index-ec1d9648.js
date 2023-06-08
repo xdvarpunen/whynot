@@ -49,7 +49,7 @@ Error generating stack: `+l.message+`
                 <html>
                     <head>
                         <style>
-                            div { height: 100vh; width: 100vw; } 
+                            div { height: 70vh; width: 100vw; } 
                             model-viewer { height: inherit; width: inherit; }
                         </style>
                         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"><\/script>
