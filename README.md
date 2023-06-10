@@ -13,9 +13,8 @@ Currently usable to script Augmented Reality apps in browser in your smartphone.
 ```js
 // Wraps content of editor and opens new tab in it
 function openNewTab(code: string) {
-    const winHtml = code;
     const winUrl = URL.createObjectURL(
-        new Blob([winHtml], { type: "text/html" })
+        new Blob([code], { type: "text/html" })
     );
     window.open(winUrl)
 }

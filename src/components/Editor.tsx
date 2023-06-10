@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from 'react'
 import { EditorState } from '@codemirror/state'
-import { EditorView, keymap } from '@codemirror/view'
+import { EditorView, keymap, lineNumbers } from '@codemirror/view'
 import { defaultKeymap } from '@codemirror/commands'
 import { oneDark } from '@codemirror/theme-one-dark'
 
@@ -32,9 +32,8 @@ function getDemoCode() {
 }
 
 function openNewTab(code: string) {
-    const winHtml = code;
     const winUrl = URL.createObjectURL(
-        new Blob([winHtml], { type: "text/html" })
+        new Blob([code], { type: "text/html" })
     );
     window.open(winUrl)
 }
@@ -53,6 +52,7 @@ export const Editor = () => {
             extensions: [
                 keymap.of(defaultKeymap),
                 oneDark,
+                lineNumbers(),
                 onUpdate
             ]
         })
